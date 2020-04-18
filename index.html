@@ -4,117 +4,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Ambulancia Por Ti</title>
 </head>
 
 <body>
-  <div id="nav-hero-container">
-    <header>
-      <div id="nav-container">
-        <figure>
-          <img src="Assets/Logo.svg" width="150" alt="Logo">
-        </figure>
-        <nav>
-          <div id="nav-blue">
-            <ul>
-              <li>
-                <img src="Assets/first-aid-kit.svg" height="40" alt="icono servicio">
-                <a href="">Servicios</a>
-              </li>
-              <li>
-                <img src="Assets/no-virus.svg" height="40" alt="icono solicitar">
-                <a href="">Solicitar</a>
-              </li>
-            </ul>
-          </div>
-          <div id="nav-red">
-            <ul>
-              <li>
-                <img src="Assets/sprayer.svg" height="40" alt="icono nosotros">
-                <a href="">Sobre nosotros</a>
-              </li>
-              <li>
-                <img src="Assets/stay-home.svg" height="40" alt="icono contacto">
-                <a href="">Contacto</a>
-              </li>
-              <li id="login">
-                <a href="">Iniciar Sesión</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+  <header class="header">
+    <figure class="logo">
+      <img src="Assets/Logo.svg" width="150" alt="Logo">
+    </figure>
+    <nav class="menu">
+      <div id="menu-blue">
+        <ul>
+          <li>
+            <img class="menu-icon" src="Assets/first-aid-kit.svg" height="40" alt="icono servicio">
+            <a class="link" class="menu-link" href="">Servicios</a>
+          </li>
+          <li>
+            <img class="menu-icon" src="Assets/no-virus.svg" height="40" alt="icono solicitar">
+            <a class="link" class="menu-link" href="">Solicitar</a>
+          </li>
+        </ul>
       </div>
-    </header>
-    <section id="hero">
-      <img src="Assets/hero-alta_01.jpg" height="1150" alt="Ambulancia fondo oscuro">
-      <div id="nombre-web">
-        <img src="Assets/nombre_03.png" alt="Nombre web">
+      <div id="menu-red">
+        <ul>
+          <li>
+            <img class="menu-icon" src="Assets/sprayer.svg" height="40" alt="icono nosotros">
+            <a class="link" class="menu-link" href="">Sobre nosotros</a>
+          </li>
+          <li>
+            <img class="menu-icon" src="Assets/stay-home.svg" height="40" alt="icono contacto">
+            <a class="link" class="menu-link" href="">Contacto</a>
+          </li>
+          <li id="login" class="menu-login">
+            <a class="link" class="menu-link" href="">Iniciar Sesión</a>
+          </li>
+        </ul>
       </div>
-      <div id="slogan">
-        <p>
-          Nosotros atendemos tu <br> emergencia
-        </p>
-      </div>
-      <div id="btn-solicitar">
-        <img src="Assets/thermometer.svg" height="40" alt="icono solicitar">
-        <button>Solicitar ambulancia</button>
-      </div>
-    </section>
-  </div>
-  <section id="nosotros">
-    <h1>¿Quiénes somos?</h1>
-    <div id="descripcion">
-      <img src="Assets/toilet-paper.svg" height="40" alt="icono info">
+    </nav>
+  </header>
+  <section class="hero">
+    <img id="hero-background" class="background-image" src="Assets/hero-alta_01.jpg" height="1150">
+    <figure class="web-nameWrapper">
+      <img class="web-name-image" src="Assets/nombre_03.png" alt="Nombre web">
+    </figure>
+    <div class="slogan" class="title">
       <p>
-       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, sit. Odit rem iusto quas obcaecati, aperiam veritatis dolores voluptatem dolore quod omnis beatae doloremque nemo.
+        Nosotros atendemos tu <br> emergencia
       </p>
     </div>
-    <img src="Assets/ambulancia-elipse_07.png" width="400" alt="Ambulancia click">
+    <div class="btn-request">
+      <img class="btn-request-icon" src="Assets/thermometer.svg" height="40" alt="icono solicitar">
+      <a class="link" href="">Solicitar ambulancia</a>
+    </div>
   </section>
-  <section id="servicios">
-    <div id="traslado">
-      <img src="Assets/virus-transmission.svg" height="40" alt="icono traslado">
-      <div class="servicios-content">
-        <h1>Traslado</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, ea veritatis nam, repudiandae sint quisquam quaerat totam aperiam dolores exercitationem reiciendis molestiae recusandae dicta rerum.
+  <section class="about">
+    <h1 class="about-title" class="title">¿Quiénes somos?</h1>
+    <div class="about-descriptionWrapper">
+      <img class="about-icon" src="Assets/toilet-paper.svg" height="40" alt="icono info">
+      <p class="about-description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, sit. Odit rem iusto quas obcaecati, aperiam
+        veritatis dolores voluptatem dolore quod omnis beatae doloremque nemo.
+      </p>
+    </div>
+    <figure class="about-imageWrapper">
+      <img class="about-image" src="Assets/ambulancia-elipse_07.png" width="400" alt="Ambulancia click">
+    </figure>
+  </section>
+  <section id="servicios" class="services">
+    <article id="traslado" class="article">
+      <img class="services-icon" src="Assets/virus-transmission.svg" height="40" alt="icono traslado">
+      <div class="services-descriptionWrapper">
+        <h1 class="services-title">Traslado</h1>
+        <p class="services-description">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, ea veritatis nam, repudiandae sint quisquam
+          quaerat totam aperiam dolores exercitationem reiciendis molestiae recusandae dicta rerum.
         </p>
-        <div>
-          <img src="Assets/no-virus.svg" height="40" alt="icono solicitar2">
-          <button>Solicitar</button>
+        <div class="btn-request">
+          <img class="btn-request-icon" src="Assets/no-virus.svg" height="40" alt="icono solicitar2">
+          <a class="link" href="">Solicitar</a>
         </div>
       </div>
-    </div>
-    <div id="vital">
-      <img src="Assets/virus-transmission.svg" height="40" alt="icono vital">
-      <div class="servicios-content">
-        <h1>Vital</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, ea veritatis nam, repudiandae sint quisquam quaerat totam aperiam dolores exercitationem reiciendis molestiae recusandae dicta rerum.
+    </article>
+    <article id="vital" class="article">
+      <img class="services-icon" src="Assets/virus-transmission.svg" height="40" alt="icono vital">
+      <div class="services-descriptionWrapper">
+        <h1 class="services-title">Vital</h1>
+        <p class="services-description">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, ea veritatis nam, repudiandae sint quisquam
+          quaerat totam aperiam dolores exercitationem reiciendis molestiae recusandae dicta rerum.
         </p>
-        <div>
-          <img src="Assets/no-virus.svg" height="40" alt="icono solicitar2">
-          <button>Solicitar</button>
+        <div class="btn-request">
+          <img class="btn-request-icon" src="Assets/no-virus.svg" height="40" alt="icono solicitar2">
+          <a class="link" href="">Solicitar</a>
         </div>
       </div>
+    </article>
+  </section>
+  <section id="contacto" class="contact">
+    <img id="contact-background" class="background-image" src="Assets/contacto-alta_02.jpg" height="720">
+    <div class="contact-titleWrapper">
+      <h1 class="contact-title" class="title">Contacto</h1>
+    </div>
+    <div class="contact-infoWrapper">
+      <img class="contact-icon" src="Assets/disinfectant.svg" height="40" alt="icono email">
+      <h3 class="contact-info">contacto@gmail.com</h3>
+    </div>
+    <div class="contact-infoWrapper">
+      <img class="contact-icon" src="Assets/first-aid-kit.svg" height="40" alt="icono cel">
+      <h3 class="contact-info">35-87-12-09-38</h3>
     </div>
   </section>
-  <section id="contacto">
-    <img src="Assets/contacto-alta_02.jpg" height="720" alt="Ambulancia contacto">
-    <div id="contacto-header">
-      <h1>Contacto</h1>
-    </div>
-    <div id="contacto-info">
-      <img src="Assets/disinfectant.svg" height="40" alt="icono email">
-      <h3>contacto@gmail.com</h3>
-      <img src="Assets/first-aid-kit.svg" height="40" alt="icono cel">
-      <h3>35-87-12-09-38</h3>
-    </div>
-  </section>
-  <footer>
-    <img src="Assets/Logo-con-letra.png" height="130" alt="Logo con nombre">
-    <h4>Edgar Elihu García Ramírez</h4>
-    <h4>2020</h4>
+  <footer class="footer">
+    <img class="footer-icon" src="Assets/Logo-con-letra.png" height="130" alt="Logo con nombre">
+    <h4 class="footer-name">Edgar Elihu García Ramírez</h4>
+    <h4 class="footer-year">2020</h4>
   </footer>
 </body>
 

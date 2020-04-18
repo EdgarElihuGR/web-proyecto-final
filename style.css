@@ -1,0 +1,28 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.link {
+  font-family: 'Roboto thin', sans-serif;
+  font-size: 22px;
+}
+
+.menu-link {
+  font-size: 40px;
+}
+
+.title {
+  font-family: 'Roboto light', sans-serif;
+}
+
+.about-description {
+  font-family: 'Roboto thin', sans-serif;
+}
+
+.services-description {
+  font-family: 'Roboto light italic', sans-serif;
+}
+
+.contact-info {
+  font-family: 'Roboto thin', sans-serif;
+}
