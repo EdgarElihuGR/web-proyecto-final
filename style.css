@@ -4,23 +4,47 @@ body {
 
 .link {
   font-family: 'Roboto thin', sans-serif;
-  font-size: 22px;
 }
 
 .menu-link {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .title {
   font-family: 'Roboto light', sans-serif;
+  font-size: 56.25px;
+}
+
+.slogan h1 {
+  line-height: 1.3em;
+  font-weight: normal;
+}
+
+.btn-request a {
+  font-size: 34.28px;
+}
+
+.about-descriptionWrapper {
+  width: 500px;
 }
 
 .about-description {
   font-family: 'Roboto thin', sans-serif;
+  font-size: 36px;
+}
+
+.services-title {
+  font-family: 'Roboto medium', sans-serif;
+  font-size: 38.09px;
+}
+
+.services-descriptionWrapper {
+  width: 500px;
 }
 
 .services-description {
-  font-family: 'Roboto light italic', sans-serif;
+  font-family: 'Roboto medium italic', sans-serif;
+  font-size: 24px;
 }
 
 .contact-info {
