@@ -17,6 +17,7 @@ body {
   justify-content: center;
   align-items: stretch;
   height: 150px;
+  position: relative;
 }
 
 #menu-blue {
@@ -57,8 +58,15 @@ li {
 }
 
 .menu-login {
+  display: flex;
+  justify-content: flex-end;
   padding: 11px;
   text-decoration: underline;
+}
+
+.logo {
+  position: absolute;
+  margin: 0;
 }
 
 .hero {
