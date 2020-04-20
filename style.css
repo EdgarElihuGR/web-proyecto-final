@@ -3,7 +3,10 @@ body {
 }
 
 .header {
+  width: 100%;
   color: #E4EEF5;
+  position: absolute;
+  z-index: 1;
 }
 
 .header a {
@@ -70,8 +73,15 @@ li {
 }
 
 .hero {
-  height: 1000px;
-  background-image: url('Assets/hero-alta_01.jpg');
+  width: 101%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#hero-background {
+  padding-top: 65%;
+  background-image: url('Assets/hero-nuevo-alta.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
