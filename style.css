@@ -85,9 +85,23 @@ li {
   background-repeat: no-repeat;
 }
 
+.web-nameWrapper {
+  position: absolute;
+  top: 210px;
+  height: 50px;
+}
+
+.web-name-image {
+  height: 170px;
+}
+
 .title {
   font-family: 'Roboto light', sans-serif;
   font-size: 56.25px;
+}
+
+.slogan {
+  /* position: absolute; */
 }
 
 .slogan h1 {
@@ -100,13 +114,38 @@ li {
   font-size: 34.28px;
 }
 
-.about-descriptionWrapper {
+.about {
+  display: flex;
+}
+
+.about-title {
   width: 500px;
+  margin-top: 25px;
+  margin-left: 192px;
+}
+
+.about-detailsWrapper {
+  width: 550px;
+  margin-right: 80px;
+}
+
+.about-descriptionWrapper {
+  text-align: center;
 }
 
 .about-description {
   font-family: 'Roboto thin', sans-serif;
   font-size: 36px;
+  margin-left: 30px;
+}
+
+.about-imageWrapper {
+  align-self: center;
+  margin-left: 0;
+}
+
+.about-image {
+  width: 615px;
 }
 
 .services-title {
