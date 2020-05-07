@@ -78,8 +78,12 @@ li {
 
 .hero {
   width: 100%;
+  height: 1200px;
   margin: 0 auto;
   position: relative;
+  background-image: url("Assets/hero-nuevo-alta.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #hero-background {
@@ -105,20 +109,19 @@ li {
 }
 
 .slogan {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  right: 0;
-  bottom: 50px;
+  right: 50px;
+  bottom: 342px;
   text-align: center;
 }
 
 .slogan h1 {
   line-height: 1.3em;
+  font-size: 70px;
   font-weight: normal;
   color: #e4eef5;
-}
-
-.btn-request a {
-  font-size: 34.28px;
 }
 
 .about {
@@ -155,14 +158,10 @@ li {
   width: 615px;
 }
 
-.services {
-}
-
 .servicesWrapper {
   display: flex;
   justify-content: space-around;
   height: 555px;
-  border: 1px solid green;
   background-color: #add4f9;
 }
 
@@ -207,14 +206,26 @@ li {
 }
 
 .btn-request a {
+  align-self: center;
   border: 1px solid #ee1625;
   padding: 4px 22px;
   background-color: #ee1625;
   text-decoration: none;
   color: white;
+  font-size: 34.28px;
+}
+
+.btn-request-hero {
+  align-self: flex-end;
 }
 
 .contact {
+  width: 100%;
+  height: 755px;
+  background-image: url("Assets/contacto-alta_02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .background-image {
@@ -231,6 +242,7 @@ li {
   background-color: #6fb5d5;
   color: white;
   text-align: center;
+  position: absolute;
 }
 
 .contact-title {
@@ -252,9 +264,13 @@ li {
 .contact-info-box {
   display: flex;
   justify-content: space-around;
-  width: 950px;
+  width: 1270px;
   height: 165px;
   background-color: #dfdede;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .footer {
