@@ -18,12 +18,14 @@ body {
 }
 
 .menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  height: 150px;
+  height: 175px;
   position: relative;
+  background: rgb(218, 30, 43);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 142, 215, 0.6) 50%,
+    rgba(218, 30, 43, 0.6) 50%
+  );
 }
 
 #menu-blue {
@@ -35,7 +37,7 @@ body {
 #menu-red {
   display: flex;
   flex-direction: column;
-  background-color: #bf5a69;
+  background-color: rgba(218, 30, 43, 0.6);
   height: auto;
   width: 50%;
 }
@@ -43,20 +45,26 @@ body {
 ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 15px;
 }
 
 li {
-  display: inline;
   text-align: center;
+  margin-top: 30px;
+}
+
+.li-half {
+  width: 45%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .link {
-  font-family: "Roboto thin", sans-serif;
+  font-family: "Roboto", sans-serif; /*thin*/
+  font-weight: 300;
   margin-top: 10px;
 }
 
@@ -65,15 +73,29 @@ li {
 }
 
 .menu-login {
-  display: flex;
-  justify-content: flex-end;
-  padding: 11px;
-  text-decoration: underline;
+  text-align: end;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.menu-login a {
+  border-bottom: 1px solid;
 }
 
 .logo {
   position: absolute;
   margin: 0;
+  height: 180px;
+  width: 195px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo img {
+  height: 180px;
+  width: 195px;
 }
 
 .hero {
@@ -104,8 +126,8 @@ li {
 }
 
 .title {
-  font-family: "Roboto light", sans-serif;
-  font-size: 56.25px;
+  font-family: "Roboto", sans-serif; /*light*/
+  font-size: 70px;
 }
 
 .slogan {
@@ -119,43 +141,48 @@ li {
 
 .slogan h1 {
   line-height: 1.3em;
-  font-size: 70px;
-  font-weight: normal;
+  font-weight: 300;
   color: #e4eef5;
 }
 
 .about {
   display: flex;
+  height: 800px;
 }
 
 .about-title {
-  width: 500px;
+  width: 550px;
+  margin: 0;
   margin-top: 25px;
-  margin-left: 192px;
+  font-weight: 300;
 }
 
 .about-detailsWrapper {
   width: 550px;
-  margin-right: 80px;
+  margin-left: 35px;
 }
 
 .about-descriptionWrapper {
+  margin-top: 30px;
   text-align: center;
 }
 
 .about-description {
-  font-family: "Roboto thin", sans-serif;
+  font-family: "Roboto", sans-serif; /*thin*/
   font-size: 36px;
+  font-weight: 100;
+  margin: 0;
   margin-left: 30px;
 }
 
 .about-imageWrapper {
   align-self: center;
   margin-left: 0;
+  margin-bottom: 100px;
 }
 
 .about-image {
-  width: 615px;
+  width: 590px;
 }
 
 .servicesWrapper {
@@ -173,7 +200,7 @@ li {
 }
 
 .services-title {
-  font-family: "Roboto medium", sans-serif;
+  font-family: "Roboto", sans-serif; /*medium*/
   font-size: 38.09px;
 }
 
@@ -194,7 +221,7 @@ li {
 }
 
 .services-description {
-  font-family: "Roboto medium italic", sans-serif;
+  font-family: "Roboto", sans-serif; /*medium italic*/
   font-size: 24px;
   margin-bottom: 70px;
   color: white;
@@ -256,7 +283,7 @@ li {
 }
 
 .contact-info {
-  font-family: "Roboto thin", sans-serif;
+  font-family: "Roboto", sans-serif; /*thin*/
   font-size: 35px;
   margin-top: 10px;
 }
@@ -292,3 +319,8 @@ li {
   margin: 0;
   margin-right: 20px;
 }
+
+/* .container {
+  width: 1000px;
+  margin: 0 auto;
+} */
