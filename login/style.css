@@ -1,5 +1,5 @@
-
-html, body {
+html,
+body {
     margin: 0;
     height: 100%;
 }
@@ -61,25 +61,32 @@ body {
     width: 70%;
 }
 
-@media screen and (min-width: 320px) {
-    
-}
-
-@media screen and (min-width: 480px) {
-}
-
 @media screen and (min-width: 768px) {
-    .main-container {
-        padding: 1.5em;
+
+}
+
+@media screen and (min-width: 992px) {
+    .header {
+        width: 25%;
+        position: fixed;
+        margin-top: 20px;
     }
 
     .logo {
         background-color: rgba(255, 255, 255, 0.6);
         border-radius: 5%;
+        margin-left: 20px;
     }
-}
 
-@media screen and (min-width: 1024px) {
-    
-    
+    .login-body {
+        margin-top: 50px;
+    }
+
+    .main-container {
+        padding: 1.5em;
+    }
+
+    .title {
+        margin-bottom: 60px;
+    }
 }
