@@ -6,7 +6,15 @@ body {
 }
 
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 142, 215, 0.6) 50%,
+    rgba(218, 30, 43, 0.6) 50%
+  );
   color: #e4eef5;
   position: absolute;
   z-index: 1;
@@ -20,12 +28,6 @@ body {
 .menu {
   height: 175px;
   position: relative;
-  background: rgb(218, 30, 43);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 142, 215, 0.6) 50%,
-    rgba(218, 30, 43, 0.6) 50%
-  );
 }
 
 #menu-blue {
@@ -99,10 +101,10 @@ li {
 }
 
 .hero {
+  display: flex;
   width: 100%;
   height: 1200px;
   margin: 0 auto;
-  position: relative;
   background-image: url("Assets/hero-nuevo-alta.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -151,15 +153,14 @@ li {
 }
 
 .about-title {
-  width: 550px;
+  width: 555px;
   margin: 0;
   margin-top: 25px;
   font-weight: 300;
 }
 
 .about-detailsWrapper {
-  width: 550px;
-  margin-left: 35px;
+  width: 430px;
 }
 
 .about-descriptionWrapper {
@@ -171,32 +172,34 @@ li {
   font-family: "Roboto", sans-serif; /*thin*/
   font-size: 36px;
   font-weight: 100;
+  text-align: justify;
   margin: 0;
-  margin-left: 30px;
 }
 
 .about-imageWrapper {
   align-self: center;
-  margin-left: 0;
-  margin-bottom: 100px;
+  margin-left: 40px;
+  margin-right: 10px;
 }
 
 .about-image {
-  width: 590px;
+  width: 500px;
+}
+
+.services {
+  background-color: #add4f9;
 }
 
 .servicesWrapper {
   display: flex;
   justify-content: space-around;
   height: 555px;
-  background-color: #add4f9;
 }
 
 .article {
   display: inherit;
   flex-direction: column;
   align-items: center;
-  margin: 0 50px;
 }
 
 .services-title {
@@ -216,7 +219,7 @@ li {
   display: inherit;
   flex-direction: column;
   align-items: center;
-  width: 500px;
+  width: 440px;
   text-align: justify;
 }
 
@@ -320,7 +323,17 @@ li {
   margin-right: 20px;
 }
 
-/* .container {
+.container {
   width: 1000px;
+  height: inherit;
   margin: 0 auto;
-} */
+}
+
+.hero .container {
+  position: relative;
+}
+
+.about .container {
+  display: flex;
+  flex-wrap: wrap;
+}
