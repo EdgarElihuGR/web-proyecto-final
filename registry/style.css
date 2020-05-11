@@ -57,12 +57,20 @@ body {
     margin-bottom: 15px;
 }
 
-.btn-login {
+.btn-registry {
     background-color: #f61525;
-    width: 70%;
+    width: 50%;
+    max-width: 50%;
+}
+
+.account-question a {
+    display: block;
 }
 
 @media screen and (min-width: 768px) {
+    .login-body {
+        padding: 1.25rem 2.28rem;
+    }
 
     .title {
         font-size: 2rem;
@@ -70,6 +78,10 @@ body {
 
     .txt-info {
         font-size: 15px;
+    }
+
+    .account-question a{
+        display: initial;
     }
 }
 
@@ -86,7 +98,7 @@ body {
         margin-left: 20px;
     }
 
-    .login-body {
+    .main-row {
         margin-top: 50px;
     }
 
