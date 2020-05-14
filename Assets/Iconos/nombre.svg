@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Trazo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#7BB5EF;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st1{fill:#FCFCFC;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st2{opacity:0.2;}
+	.st3{fill:#FFFFFF;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st4{fill:#FCF1D6;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st0" d="M456,391H48c-6.6,0-12-5.4-12-12V117c0-6.6,5.4-12,12-12h408c6.6,0,12,5.4,12,12v262
+		C468,385.6,462.6,391,456,391z"/>
+	<g>
+		<path class="st1" d="M207,342.73H103c-8.28,0-15-6.72-15-15v-44.51c0-10.97,8.89-19.86,19.86-19.86h94.29
+			c10.97,0,19.86,8.89,19.86,19.86v44.51C222,336.02,215.28,342.73,207,342.73z"/>
+		<polyline class="st2" points="156,264 206.52,264.05 220,267.69 220,337.77 211.28,342.54 163.72,343 148,341 		"/>
+		<circle class="st3" cx="152.69" cy="209.55" r="39.9"/>
+		<polygon class="st2" points="167.69,174.04 156.71,247.99 185.06,233.24 194.05,199.67 183.07,184.29 		"/>
+	</g>
+	<path class="st4" d="M309,142h-99c-6.6,0-12-5.4-12-12V83c0-6.6,5.4-12,12-12h99c6.6,0,12,5.4,12,12v47
+		C321,136.6,315.6,142,309,142z"/>
+	<path class="st3" d="M429,213H272c-6.6,0-12-5.4-12-12v-9c0-6.6,5.4-12,12-12h157c6.6,0,12,5.4,12,12v9
+		C441,207.6,435.6,213,429,213z"/>
+	<path class="st3" d="M429,267H272c-6.6,0-12-5.4-12-12v-9c0-6.6,5.4-12,12-12h157c6.6,0,12,5.4,12,12v9
+		C441,261.6,435.6,267,429,267z"/>
+	<path class="st3" d="M429,319H272c-6.6,0-12-5.4-12-12v-9c0-6.6,5.4-12,12-12h157c6.6,0,12,5.4,12,12v9
+		C441,313.6,435.6,319,429,319z"/>
+</g>
+</svg>

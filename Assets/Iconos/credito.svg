@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Trazo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C6AE1E;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st1{fill:#FFDC40;}
+	.st2{fill:#FF6849;}
+	.st3{opacity:0.43;fill:#B79D1D;}
+	.st4{fill:#B7B7B7;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st5{opacity:0.85;fill:#A3A3A2;}
+</style>
+<path class="st0" d="M440.07,391H63.93C48.57,391,36,378.43,36,363.07V132.93C36,117.57,48.57,105,63.93,105h376.14
+	c15.36,0,27.93,12.57,27.93,27.93v230.14C468,378.43,455.43,391,440.07,391z"/>
+<circle class="st1" cx="358.55" cy="167.55" r="32.55"/>
+<circle class="st2" cx="403.45" cy="167.55" r="32.55"/>
+<rect x="71" y="136" class="st1" width="98" height="66"/>
+<path class="st3" d="M122,386l145-276H61l-4.96,2.29c-5.22,2.41-9.52,6.43-12.27,11.48L42,127l-1,129l1,111c0,0,3,19,32,19
+	S122,386,122,386z"/>
+<path class="st4" d="M427,267H78c-6.6,0-12-5.4-12-12v-9c0-6.6,5.4-12,12-12h349c6.6,0,12,5.4,12,12v9C439,261.6,433.6,267,427,267z
+	"/>
+<path class="st4" d="M236,315H79c-6.6,0-12-5.4-12-12v-5c0-6.6,5.4-12,12-12h157c6.6,0,12,5.4,12,12v5C248,309.6,242.6,315,236,315z
+	"/>
+<path class="st5" d="M186,262l13-23H77.59c-2.8,0-5.21,1.97-5.79,4.72c-0.45,2.17-0.73,4.69-0.81,7.28c-0.13,4.39,0.59,8.72,4,10
+	C77,262,186,262,186,262z"/>
+<path class="st5" d="M165.44,309.72L176,291H78.75c-1.04,0-2.08,0.27-2.96,0.82c-1.63,1.02-2.87,2.34-3.13,3.02
+	c-0.64,1.69-0.59,3.82-0.66,5.93c-0.05,1.59,0.14,3.15,0.57,4.49c0.7,2.22,3.06,4.36,5.42,4.46
+	C92.59,310.35,165.44,309.72,165.44,309.72z"/>
+</svg>
