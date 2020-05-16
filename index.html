@@ -54,11 +54,18 @@
     </head>
 
     <body>
-        <!-- <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <header class="header">
+            <nav
+                id="navbar"
+                class="navbar navbar-expand-lg navbar-light fixed-top"
+            >
                 <div class="container nav-container">
                     <a href="#" class="navbar-brand">
-                        <img src="Assets/Iconos/Logo.svg" width="100" alt="Logo" />
+                        <img
+                            src="Assets/Iconos/Logo.svg"
+                            width="100"
+                            alt="Logo"
+                        />
                     </a>
                     <button
                         class="navbar-toggler collapsed"
@@ -72,7 +79,7 @@
                         <i class="fas fa-bars icon-toggle-btn"></i>
                     </button>
                     <div id="qa-navbar" class="navbar-collapse collapse">
-                        <ul class="navbar-nav ml-auto">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
                                 <img
                                     class="menu-icon"
@@ -80,7 +87,7 @@
                                     height="40"
                                     alt="icono servicio"
                                 />
-                                <a class="nav-link link navbar-link" href=""
+                                <a class="nav-link nav-link-custom" href=""
                                     >Servicios</a
                                 >
                             </li>
@@ -91,19 +98,20 @@
                                     height="40"
                                     alt="icono solicitar"
                                 />
-                                <a class="nav-link link navbar-link" href=""
+                                <a class="nav-link nav-link-custom" href=""
                                     >Solicitar</a
                                 >
                             </li>
-                            <li class="nav-item">
+                            <li id="item-about" class="nav-item">
                                 <img
                                     class="menu-icon"
                                     src="Assets/Iconos/nosotros.svg"
                                     height="40"
                                     alt="icono nosotros"
                                 />
-                                <a class="nav-link link navbar-link" href=""
-                                    >Sobre nosotros</a
+                                <a class="nav-link nav-link-custom" href=""
+                                    ><p class="nav-link-p-about">Sobre</p>
+                                    <p class="nav-link-p-about">Nosotros</p></a
                                 >
                             </li>
                             <li class="nav-item">
@@ -113,20 +121,21 @@
                                     height="40"
                                     alt="icono contacto"
                                 />
-                                <a class="nav-link link navbar-link" href=""
+                                <a class="nav-link nav-link-custom" href="#"
                                     >Contacto</a
                                 >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link link navbar-link" href=""
-                                    >Hola $nombre</a
+                                <a
+                                    id="link-sign-in-out"
+                                    class="nav-link nav-link-custom"
+                                    href=""
+                                    >Iniciar Sesión</a
                                 >
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        </header> -->
+        </header>
         <section class="hero">
             <div class="container-custom">
                 <figure class="web-nameWrapper">
@@ -281,5 +290,17 @@
                 <h4 class="footer-year">2020</h4>
             </div>
         </footer>
+        <script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-185px";
+                }
+                prevScrollpos = currentScrollPos;
+            };
+        </script>
     </body>
 </html>
