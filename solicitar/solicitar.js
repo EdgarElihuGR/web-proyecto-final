@@ -1,5 +1,1 @@
-function changeMapToBottom(media) {
-    if(media.matches){
-        
-    }
-}
+console.log('hi, script working');
