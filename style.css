@@ -42,25 +42,6 @@ nav {
     text-decoration: none;
 }
 
-.menu {
-    height: 175px;
-    position: relative;
-}
-
-#menu-blue {
-    background-color: rgba(0, 142, 215, 0.6);
-    height: auto;
-    width: 50%;
-}
-
-#menu-red {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(218, 30, 43, 0.6);
-    height: auto;
-    width: 50%;
-}
-
 ul {
     display: flex;
     flex-direction: row;
@@ -73,12 +54,6 @@ ul {
 li {
     text-align: center;
     margin-top: 30px;
-}
-
-.li-half {
-    width: 45%;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .navbar {
@@ -583,7 +558,4 @@ li {
     .footer-info h4 {
         font-size: 20px;
     }
-}
-
-@media screen and (max-width: 320px) {
 }
