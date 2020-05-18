@@ -2,45 +2,15 @@
 $pageTitle = 'Ambulancia Por Ti';
 $pageStyle = 'style.css';
 $pageName = 'index';
-include('includes/head.php');
 ?>
 
-<header class="header">
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container nav-container">
-            <a href="#" class="navbar-brand">
-                <img src="Assets/Iconos/Logo.svg" width="100" alt="Logo" />
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#qa-navbar" aria-controls="qa-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars icon-toggle-btn"></i>
-            </button>
-            <div id="qa-navbar" class="navbar-collapse collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <img class="menu-icon" src="Assets/Iconos/servicios.svg" height="40" alt="icono servicio" />
-                        <a class="nav-link nav-link-custom" href="">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <img class="menu-icon" src="Assets/Iconos/solicitar.svg" height="40" alt="icono solicitar" />
-                        <a class="nav-link nav-link-custom" href="">Solicitar</a>
-                    </li>
-                    <li id="item-about" class="nav-item">
-                        <img class="menu-icon" src="Assets/Iconos/nosotros.svg" height="40" alt="icono nosotros" />
-                        <a class="nav-link nav-link-custom" href="">
-                            <p class="nav-link-p-about">Sobre</p>
-                            <p class="nav-link-p-about">Nosotros</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <img class="menu-icon" src="Assets/Iconos/contacto.svg" height="40" alt="icono contacto" />
-                        <a class="nav-link nav-link-custom" href="#">Contacto</a>
-                        <a id="link-sign-in-out" class="nav-link nav-link-custom" href="">Iniciar Sesión</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+<?php include('includes/head.php'); ?>
+
+<?php include('includes/nav.php'); ?>
+
+<button id="btn-top" title="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+</button>
 <section class="hero">
     <div class="container-custom">
         <figure class="web-nameWrapper">
@@ -58,7 +28,7 @@ include('includes/head.php');
         </div>
     </div>
 </section>
-<section class="about">
+<section id="about" class="about">
     <div class="container-custom">
         <div class="about-detailsWrapper">
             <h1 class="about-title title">¿Quiénes somos?</h1>
@@ -79,7 +49,7 @@ include('includes/head.php');
         </figure>
     </div>
 </section>
-<section id="servicios" class="services">
+<section id="services" class="services">
     <div class="container-custom">
         <!-- <div class="servicesWrapper"> -->
         <article id="traslado" class="article">
@@ -119,7 +89,7 @@ include('includes/head.php');
         <!-- </div> -->
     </div>
 </section>
-<section id="contacto" class="contact">
+<section id="contact" class="contact">
     <div class="contact-titleWrapper">
         <h1 class="contact-title title">Contacto</h1>
     </div>
@@ -138,18 +108,7 @@ include('includes/head.php');
 <?php include('includes/footer.php') ?>
 
 <!-- Script navbar -->
-<script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-185px";
-        }
-        prevScrollpos = currentScrollPos;
-    };
-</script>
+
 </body>
 
 </html>

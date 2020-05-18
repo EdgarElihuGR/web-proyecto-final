@@ -2,45 +2,12 @@
 $pageTitle = 'Solicitar';
 $pageStyle = 'style.css';
 $pageName = 'Solicitar';
-include('../includes/head.php');
 ?>
 
-<div class="navWrapper">
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container nav-container">
-            <a href="#" class="navbar-brand">
-                <img src="../Assets/Iconos/Logo.svg" width="100" alt="Logo" />
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#qa-navbar" aria-controls="qa-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars icon-toggle-btn"></i>
-            </button>
-            <div id="qa-navbar" class="navbar-collapse collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <img class="menu-icon" src="../Assets/Iconos/servicios.svg" height="40" alt="icono servicio" />
-                        <a class="nav-link nav-link-custom" href="">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <img class="menu-icon" src="../Assets/Iconos/solicitar.svg" height="40" alt="icono solicitar" />
-                        <a class="nav-link nav-link-custom" href="">Solicitar</a>
-                    </li>
-                    <li id="item-about" class="nav-item">
-                        <img class="menu-icon" src="../Assets/Iconos/nosotros.svg" height="40" alt="icono nosotros" />
-                        <a class="nav-link nav-link-custom" href="">
-                            <p class="nav-link-p-about">Sobre</p>
-                            <p class="nav-link-p-about">Nosotros</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <img class="menu-icon" src="../Assets/Iconos/contacto.svg" height="40" alt="icono contacto" />
-                        <a class="nav-link nav-link-custom" href="#">Contacto</a>
-                        <a id="link-sign-in-out" class="nav-link nav-link-custom" href="">Iniciar Sesión</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
+<?php include('../includes/head.php'); ?>
+
+<?php include('../includes/nav.php'); ?>
+
 <header class="container header">
     <h2 class="text-center title">Solicitar Ambulancia</h2>
 </header>

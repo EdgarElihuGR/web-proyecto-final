@@ -18,6 +18,10 @@ body {
     background-size: auto;
 }
 
+input[name="password"] {
+    margin-bottom: 10px;
+}
+
 .outer {
     display: table;
     position: absolute;

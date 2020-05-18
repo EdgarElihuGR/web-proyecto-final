@@ -1,9 +1,11 @@
 <?php
 $pageTitle = 'Iniciar Sesion';
 $pageStyle = 'style.css';
-include('../includes/head.php');
 ?>
 
+<?php include('../includes/head.php'); ?>
+
+<?php include('../includes/config.php'); ?>
 
 <header class="header">
     <figure class="logo float-lg-left">
@@ -54,7 +56,7 @@ include('../includes/head.php');
                 </div>
                 <p class="text-center txt-info">
                     ¿No tienes cuenta?
-                    <a href="#" class="d-block link">
+                    <a href="../registry/registry.php" class="d-block link">
                         Regístrate
                     </a>
                 </p>
