@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             mysqli_stmt_bind_param($stmt, "s", $param_email);
 
             // Set parameters
-            $param_email = trim($_POST["email"]);
+            $clean_email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);//Form info sanitized
+            $param_email = $clean_email;
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
@@ -30,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     $email_err = "El email ya está registrado.";
                 } else {
-                    $email = trim($_POST["email"]);
+                    $email = $clean_email;
                 }
             } else {
                 echo "Algo salió mal. Por favor intenta de nuevo";
@@ -47,14 +48,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (strlen(trim($_POST["password"])) < 6) {
         $password_err = "La contraseña debe de tener al menos 6 caracteres.";
     } else {
-        $password = trim($_POST["password"]);
+        $clean_password = filter_var(trim($_POST["password"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);//Form info sanitized
+        $password = $clean_password;
     }
 
     // Validate confirm password
     if (empty(trim($_POST["confirm_password"]))) {
         $confirm_password_err = "Confirma tu contraseña.";
     } else {
-        $confirm_password = trim($_POST["confirm_password"]);
+        $clean_confirm_password = filter_var(trim($_POST["confirm_password"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);//Form info sanitized
+        $confirm_password = $clean_confirm_password;
         if (empty($password_err) && ($password != $confirm_password)) {
             $confirm_password_err = "La contraseña no concuerda.";
         }
@@ -79,12 +82,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             );
 
             // Set parameters
-            $param_nombre = $_POST['nombre'];
-            $param_apellido = $_POST['apellido'];
+            $clean_nombre = filter_var(trim($_POST["nombre"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);//Form info sanitized
+            $param_nombre = $clean_nombre;
+
+            $clean_apellido = filter_var(trim($_POST["apellido"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);//Form info sanitized
+            $param_apellido = $clean_apellido;
+
             $param_email = $email;
-            $param_telefono = $_POST['telefono'];
+
+            $clean_telefono = filter_var(trim($_POST["telefono"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);//Form info sanitized
+            $param_telefono = $clean_telefono;
+
             $param_password = password_hash($password, PASSWORD_DEFAULT);
-            $param_name = $_POST['direccion'];
+
+            $clean_direccion = filter_var(trim($_POST["direccion"]), FILTER_SANITIZE_FULL_SPECIAL_CHARS);//Form info sanitized
+            $param_direccion = $clean_direccion;
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
@@ -122,11 +134,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <img class="icon mx-auto d-block" src="../Assets/Iconos/nombre.svg" />
-                            <input type="text" class="form-control" name="nombre" placeholder="Nombre" pattern="[A-Za-zñÑ]{1,32}" required />
+                            <input type="text" class="form-control" name="nombre" placeholder="Nombre" pattern="[A-Za-zñÑ ]{1,32}" required />
                         </div>
                         <div class="form-group col-md-6">
                             <img class="icon mx-auto d-block" src="../Assets/Iconos/nombre.svg" />
-                            <input type="text" class="form-control" name="apellido" placeholder="Apellido" pattern="[A-Za-zñÑ]{1,32}" required />
+                            <input type="text" class="form-control" name="apellido" placeholder="Apellido" pattern="[A-Za-zñÑ ]{1,32}" required />
                         </div>
                     </div>
                     <div class="form-row">
@@ -162,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="form-group">
                         <img src="../Assets/Iconos/credito.svg" class="icon mx-auto d-block" />
-                        <input type="text" class="form-control" name="numeroTarjeta" pattern="[0-9]{19}" placeholder="Número de tarjeta" required />
+                        <input type="text" class="form-control" name="numeroTarjeta" pattern="[0-9]{16|19}" placeholder="Número de tarjeta" required />
                     </div>
                     <div class="row">
                         <div class="col">

@@ -6,6 +6,8 @@
         $changeDirAbove = '../';
         $routeToIndex = '/';
     }
+
+    session_start();
 ?>
 
 <div class="navWrapper">
@@ -37,7 +39,15 @@
                     <li class="nav-item">
                         <img class="menu-icon" src="<?= $changeDirAbove ?>Assets/Iconos/contacto.svg" height="40" alt="icono contacto" />
                         <a class="nav-link nav-link-custom" href="<?= $changeDirAbove ?>#contact">Contacto</a>
-                        <a id="link-sign-in-out" class="nav-link nav-link-custom" href="login/login.php">Iniciar Sesión</a>
+                        <?php if((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)) : ?>
+                        <a id="link-sign-in-out" class="nav-link nav-link-custom" href="includes/logout.php">
+                            <?= htmlspecialchars("Hola ".$_SESSION['name']);?>
+                        </a>
+                        <?php else: ?>
+                        <a id="link-sign-in-out" class="nav-link nav-link-custom" href="login/login.php">
+                            <?= "Iniciar Sesión";?>
+                        </a>
+                        <?php endif; ?>
                     </li>
                 </ul>
             </div>
