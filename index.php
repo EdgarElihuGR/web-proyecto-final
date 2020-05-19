@@ -1,4 +1,5 @@
 <?php
+session_start();
 $pageTitle = 'Ambulancia Por Ti';
 $pageStyle = 'style.css';
 $pageName = 'index';

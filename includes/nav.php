@@ -1,4 +1,4 @@
-<?php 
+<?php   
     $changeDirAbove = ''; //Variable to add ../ to routes when the .php file is inside a dir
     $routeToIndex = ''; //Variable to add index.php to go to index when .php file is inside a dir
 
@@ -6,8 +6,6 @@
         $changeDirAbove = '../';
         $routeToIndex = '/';
     }
-
-    session_start();
 ?>
 
 <div class="navWrapper">
