@@ -6,9 +6,8 @@ $pageName = 'Solicitar';
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: ../login/login.php");
     exit;
+    //dummy change
 }
-
-
 ?>
 
 <?php include('../includes/head.php'); ?>
