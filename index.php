@@ -108,8 +108,9 @@ $pageName = 'index';
 
 <?php include('includes/footer.php') ?>
 
-<!-- Script navbar -->
-
+<!-- Custom Scripts -->
+<script src="includes/nav.js"></script>
+<script src="index.js"></script>
 </body>
 
 </html>

@@ -1,12 +1,15 @@
 <?php
+session_start();
 $pageTitle = 'Solicitar';
 $pageStyle = 'style.css';
 $pageName = 'Solicitar';
 // Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    $_SESSION['solicitar_access'] = true;
     header("location: ../login/login.php");
     exit;
-    //dummy change
+} else {
+    $_SESSION['solicitar_access'] = false;
 }
 ?>
 
@@ -31,7 +34,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="col-12 col-sm-6 form-group input-ubicacion-container">
                     <img src="../Assets/Iconos/ubicacion.svg" class="icon" alt="tipo" height="40px" />
-                    <input type="text" id="ubicacion-autocomplete" class="form-control input-ubicacion" onfocus="geoLocate()" placeholder="Ubicación de la emergencia" />
+                    <input type="text" id="ubicacion-autocomplete" class="form-control input-ubicacion" placeholder="Ubicación de la emergencia" />
                     <button class="btn btn-ubicacion btn-danger" type="button">
                         Utilizar ubicación actual
                     </button>
@@ -57,18 +60,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </main>
 </div>
 <?php include('../includes/footer.php') ?>
-<script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-185px";
-        }
-        prevScrollpos = currentScrollPos;
-    };
-</script>
+
+<!-- Scripts -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKTgvz75KCIojBXP2YS7cGKN6rz149ems&libraries=places"></script>
+<!-- Custom Scripts -->
+<script src="../includes/nav.js"></script>
+<script src="solicitar.js"></script>
+
 </body>
 
 </html>

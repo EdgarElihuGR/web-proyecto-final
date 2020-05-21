@@ -61,8 +61,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["name"] = $nombre;                            
                             
-                            // Redirect user to welcome page
-                            header("location: ../index.php");
+                            // Redirect user
+                            
+                            if(isset($_SESSION['solicitar_access']) || $_SESSION['solicitar_access'] === true){
+                                header("location: ../solicitar/solicitar.php");
+                            }
+                            else{
+                                header("location: ../index.php");
+                            }
+                            
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "La contraseña que ingresaste no es válida.";
