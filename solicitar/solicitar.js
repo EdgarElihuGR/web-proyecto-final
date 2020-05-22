@@ -76,10 +76,13 @@ function callback(results, status) {
         for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
             var hospitalNombre = results[i].name;
-            var hospitalLatLng = results[i].geometry.location.lat() + "," + results[i].geometry.location.lng();
-            var hospital = new Option(hospitalNombre,hospitalLatLng);
-            $(hospital).html(hospitalNombre);
-            $("#select-hospital").append(hospital);
+            var hospitalLatLng =
+                results[i].geometry.location.lat() +
+                "," +
+                results[i].geometry.location.lng();
+            var hospitalOption = new Option(hospitalNombre, hospitalLatLng);
+            $(hospitalOption).html(hospitalNombre);
+            $("#select-hospital").append(hospitalOption);
         }
     }
 }
@@ -90,3 +93,27 @@ function createMarker(place) {
         position: place.geometry.location,
     });
 }
+
+$("#select-hospital").on("change", function () {
+    
+    var directionsService = new google.maps.DirectionsService();
+    var directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsRenderer.setMap(map);
+
+    var latLng = this.value.split(",");
+    var hospital = new google.maps.LatLng(latLng[0], latLng[1]);
+
+    function calcRoute(hospital) {
+        var request = {
+            origin: emergency,
+            destination: hospital,
+            travelMode: "DRIVING",
+        };
+        directionsService.route(request, function (result, status) {
+            if (status == "OK") {
+                directionsRenderer.setDirections(result);
+            }
+        });
+    }
+    calcRoute(hospital);
+});
