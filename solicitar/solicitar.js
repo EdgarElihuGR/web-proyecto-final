@@ -47,7 +47,9 @@ function initMap() {
             position: place.geometry.location,
         });
 
-        console.log(place.geometry.location.lat + ',' + place.geometry.location.lng);
+        console.log(
+            place.geometry.location.lat + "," + place.geometry.location.lng
+        );
 
         //Get the emergency's spot lat-lng
         var placeLat = place.geometry.location.lat();
@@ -60,29 +62,26 @@ function initMap() {
         // Request to search nearby hospitals
         var request = {
             location: emergency,
-            radius: "1500",
+            radius: "1000",
             type: ["hospital"],
         };
         places = new google.maps.places.PlacesService(map);
 
-        places.findPlaceFromQuery(request, function (results, status) {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                console.log(results);
-                for (var i = 0; i < results.length; i++) {
-                    createMarker(results[i]);
-                }
-
-                map.setCenter(results[0].geometry.location);
-            }
-        });
-
-        function createMarker(place) {
-            var marker = new google.maps.Marker({
-                map: map,
-                position: place.geometry.location,
-            });
-        }
+        places.nearbySearch(request, callback);
     });
 }
 
-// google.maps.event.addDomListener(window, "load", initMap);
+function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+        }
+    }
+}
+
+function createMarker(place) {
+    var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location,
+    });
+}
