@@ -27,7 +27,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="form-row justify-content-center form-row form-row1">
                 <div class="col-6 col-sm-6 form-group select-tipo-container">
                     <img src="../Assets/Iconos/solicitar.svg" class="icon" alt="tipo" height="40px" />
-                    <select class="form-control selectpicker" id="select_tipo" name="tipo_ambulancia" title="Tipo" data-style="btn-primary">
+                    <select class="custom-select" id="select_tipo" name="tipo_ambulancia" title="Tipo">
+                        <option value="" disabled selected>Tipo</option>
                         <option value="1">Traslado</option>
                         <option value="2">Vital</option>
                     </select>
@@ -43,7 +44,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="form-row justify-content-center form-row form-row2">
                 <div class="col-sm-8 col-md-6 form-group select-hospital-container">
                     <img src="../Assets/Iconos/hospital.svg" class="icon" alt="hospital" height="40px" />
-                    <select name="hospital" id="select-hospital" class="form-control selectpicker" title="Hospital" data-style="btn-primary">
+                    <select name="hospital" id="select-hospital" class="custom-select">
+                        <option value="" disabled selected>Hospital</option>
                     </select>
                     <p>
                         *Solo se muestran los hospitales más cercanos a

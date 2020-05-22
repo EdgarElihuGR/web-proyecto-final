@@ -193,6 +193,37 @@ li {
     font-weight: 300;
 }
 
+/*Custom select*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    background-color: DodgerBlue;
+    color: white;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+/*Custom select end*/
+
 .submit-solicitar-container {
     text-align: center;
 }

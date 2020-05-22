@@ -75,6 +75,11 @@ function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
+            var hospitalNombre = results[i].name;
+            var hospitalLatLng = results[i].geometry.location.lat() + "," + results[i].geometry.location.lng();
+            var hospital = new Option(hospitalNombre,hospitalLatLng);
+            $(hospital).html(hospitalNombre);
+            $("#select-hospital").append(hospital);
         }
     }
 }
