@@ -1,4 +1,7 @@
 var map;
+var places;
+var emergency;
+var autocomplete;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("googleMap"), {
@@ -8,10 +11,7 @@ function initMap() {
         },
         zoom: 12,
     });
-}
 
-$(document).ready(function () {
-    var autocomplete;
     var input = document.getElementById("ubicacion-autocomplete");
     var defaultBounds = new google.maps.LatLngBounds(
         new google.maps.LatLng(20.6605563, -103.2765846),
@@ -23,7 +23,7 @@ $(document).ready(function () {
     };
 
     autocomplete = new google.maps.places.Autocomplete(input, options);
-    autocomplete.setFields(["address_components", "geometry", "icon", "name"]);
+    autocomplete.setFields(["address_components"]);
 
     google.maps.event.addListener(autocomplete, "place_changed", function () {
         var place = autocomplete.getPlace();
@@ -42,42 +42,42 @@ $(document).ready(function () {
             map.setCenter(place.geometry.location);
             map.setZoom(17); // Why 17? Because it looks good.
         }
-        var marker = new google.maps.Marker({
+        var emergencyMarker = new google.maps.Marker({
             map: map,
             position: place.geometry.location,
         });
 
+        //Get the emergency's spot lat-lng
         var placeLat = place.geometry.location.lat();
         var placeLng = place.geometry.location.lng();
-        console.log(placeLat + ", " + placeLng);
 
-        var urlNearbyHospitals = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+placeLat+","+placeLng+"&radius=1500&type=hospital";
+        emergency = place.geometry.location;
 
-        $.ajax({
-            url: urlNearbyHospitals,
-            type: "GET",
-            dataType: "jsonp",
-            cache: false,
-            success: function (result) {
-                var hospitales = [];
-                result.forEach(element => {
-                    hospitales.push({
-                        nombre: element.name
-                        // location: element.geometry.location
-                    });
-                    console.log(hospitales);
-                });
-            },
-            fail: function(error) {
-                console.log("falló");
+        // Request to search nearby hospitals
+        var request = {
+            location: emergency,
+            radius: "1500",
+            type: ["hospital"],
+        };
+        places = new google.maps.places.PlacesService(map);
+
+        places.findPlaceFromQuery(request, function (results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                    createMarker(results[i]);
+                }
+
+                map.setCenter(results[0].geometry.location);
             }
         });
+
+        function createMarker(place) {
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+            });
+        }
     });
-});
+}
 
-$(document).on("change", "#" + "ubicacion-autocomplete", function () {
-    nearPlaceLat = 0;
-    nearPlaceLng = 0;
-});
-
-google.maps.event.addDomListener(window, "load", initMap);
+// google.maps.event.addDomListener(window, "load", initMap);
