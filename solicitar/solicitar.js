@@ -2,7 +2,6 @@ var map;
 var places;
 var emergency;
 var autocomplete;
-var hospitales;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("googleMap"), {
@@ -74,12 +73,8 @@ function initMap() {
 
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
-        hospitales = results;
         for (var i = 0; i < results.length; i++) {
             createMarker(results[i]);
-            var option = new Option(results[i].name,results[i].name);
-            $(option).html(results[i].name);
-            $('select[name="hospital"]').append(option);
         }
     }
 }
