@@ -64,6 +64,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <!-- Custom Scripts -->
 <script src="../includes/nav.js"></script>
 <script src="solicitar.js"></script>
+
 <!-- Scripts -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKTgvz75KCIojBXP2YS7cGKN6rz149ems&libraries=places&callback=initMap" async defer></script>
 </body>

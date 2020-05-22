@@ -23,7 +23,7 @@ function initMap() {
     };
 
     autocomplete = new google.maps.places.Autocomplete(input, options);
-    autocomplete.setFields(["address_components"]);
+    autocomplete.setFields(["address_components", "geometry", "icon", "name"]);
 
     google.maps.event.addListener(autocomplete, "place_changed", function () {
         var place = autocomplete.getPlace();
@@ -47,11 +47,15 @@ function initMap() {
             position: place.geometry.location,
         });
 
+        console.log(place.geometry.location.lat + ',' + place.geometry.location.lng);
+
         //Get the emergency's spot lat-lng
         var placeLat = place.geometry.location.lat();
         var placeLng = place.geometry.location.lng();
 
-        emergency = place.geometry.location;
+        console.log(placeLat, placeLng);
+
+        emergency = new google.maps.LatLng(placeLat, placeLng);
 
         // Request to search nearby hospitals
         var request = {
@@ -63,6 +67,7 @@ function initMap() {
 
         places.findPlaceFromQuery(request, function (results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
+                console.log(results);
                 for (var i = 0; i < results.length; i++) {
                     createMarker(results[i]);
                 }
