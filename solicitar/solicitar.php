@@ -53,7 +53,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     </p>
                 </div>
                 <div class="col-6 col-md-6 form-group submit-solicitar-container">
-                    <button class="btn btn-danger" type="submit">
+                    <button id="solicitar" class="btn btn-danger" type="button">
                         Solicitar
                     </button>
                 </div>
@@ -69,6 +69,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <!-- Scripts -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKTgvz75KCIojBXP2YS7cGKN6rz149ems&libraries=places&callback=initMap" async defer></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

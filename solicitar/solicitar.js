@@ -117,3 +117,7 @@ $("#select-hospital").on("change", function () {
     }
     calcRoute(hospital);
 });
+
+$("#solicitar").on("click", function(){
+    swal("Solicitud enviada!", "Tu ambulancia viene por ti!", "success");
+});

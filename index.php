@@ -24,7 +24,7 @@ $pageName = 'index';
             </h1>
             <div class="btn-request btn-request-hero">
                 <img class="btn-request-icon" src="Assets/Iconos/solicitar.svg" height="40" alt="icono solicitar" />
-                <a class="link" href="">Solicita tu ambulancia</a>
+                <a class="link" href="solicitar/solicitar.php">Solicita tu ambulancia</a>
             </div>
         </div>
     </div>
@@ -58,15 +58,11 @@ $pageName = 'index';
             <div class="services-descriptionWrapper">
                 <h1 class="services-title">Traslado</h1>
                 <p class="services-description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing
-                    elit. Neque, ea veritatis nam, repudiandae sint
-                    quisquam quaerat totam aperiam dolores
-                    exercitationem reiciendis molestiae recusandae dicta
-                    rerum.
+                    Una ambulancia que tiene la misión de transportar pacientes a un centro médico, pero no para una atención urgente. Vehículos como furgonetas o autobuses pueden ser utilizados para esta tarea. También son denominadas ATS (Ambulancias de Traslado Simple).
                 </p>
                 <div class="btn-request">
                     <img class="btn-request-icon" src="Assets/Iconos/solicitar.svg" height="40" alt="icono solicitar2" />
-                    <a class="link" href="">Solicitar</a>
+                    <a class="link" href="solicitar/solicitar.php">Solicitar</a>
                 </div>
             </div>
         </article>
@@ -75,15 +71,11 @@ $pageName = 'index';
             <div class="services-descriptionWrapper">
                 <h1 class="services-title">Vital</h1>
                 <p class="services-description">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing
-                    elit. Neque, ea veritatis nam, repudiandae sint
-                    quisquam quaerat totam aperiam dolores
-                    exercitationem reiciendis molestiae recusandae dicta
-                    rerum.
+                    Proporciona cuidados de emergencia a pacientes enfermos o heridos. Proporcionan medios y personal sanitario de emergencia para atender al paciente en el lugar del incidente y durante el traslado a un centro médico.
                 </p>
                 <div class="btn-request">
                     <img class="btn-request-icon" src="Assets/Iconos/solicitar.svg" height="40" alt="icono solicitar2" />
-                    <a class="link" href="">Solicitar</a>
+                    <a class="link" href="solicitar/solicitar.php">Solicitar</a>
                 </div>
             </div>
         </article>

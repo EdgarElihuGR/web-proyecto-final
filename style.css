@@ -537,6 +537,7 @@ li {
 
     .services-descriptionWrapper {
         width: 90%;
+        text-align: center;
     }
 
     .about-detailsWrapper {
@@ -553,9 +554,11 @@ li {
         text-align: center;
     }
 
+    
     .about-description {
         font-size: 30px;
         justify-content: center;
+        text-align: center;
     }
 
     .contact {

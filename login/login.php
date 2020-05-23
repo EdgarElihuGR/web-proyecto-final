@@ -98,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <header class="header">
     <figure class="logo float-lg-left">
-        <a href="#">
+        <a href="../index.php">
             <img src="../Assets/Iconos/Logo.svg" />
         </a>
     </figure>
